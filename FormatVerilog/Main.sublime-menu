@@ -1,0 +1,43 @@
+[
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "FormatVerilog",
+                        "children":
+                        [
+                            {
+                                "command": "edit_settings",
+                                "args":
+                                {
+                                    "base_file": "${packages}/FormatVerilog/FormatVerilog.sublime-settings",
+                                    "default": "// Settings in here will be overridden by settings in\n// Packages/User/FormatVerilog.sublime-settings\n{\n\t$0\n}\n"
+                                },
+                                "caption": "Settings – Default"
+                            },
+                            {
+                                "command": "edit_settings",
+                                "args":
+                                {
+                                    "base_file": "${packages}/FormatVerilog/FormatVerilog.sublime-settings",
+                                    "user_file": "${packages}/User/FormatVerilog.sublime-settings",
+                                    "default": "// Settings in here will override those in\n// Packages/FormatVerilog/FormatVerilog.sublime-settings\n{\n\t$0\n}\n"
+                                },
+                                "caption": "Settings – User"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+] 

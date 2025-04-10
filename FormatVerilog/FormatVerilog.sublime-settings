@@ -1,0 +1,112 @@
+// Settings for FormatVerilog plugin
+{
+  // Enable or disable format on save for Verilog files
+  // 是否在保存 Verilog 文件时启用格式化 (Enable/disable format on save)
+  "enabled": true,
+
+  // Full path to the verible-verilog-format executable
+  // Or relative path if placing the executable inside the plugin directory
+  // IMPORTANT: Use forward slashes /, even on Windows.
+  // verible-verilog-format.exe 的完整路径，或相对于插件目录的路径。
+  // 注意：即使在 Windows 上，也请使用正斜杠 /。
+  "verible_executable_path": "${packages}/FormatVerilog/verible/verible-verilog-format.exe",
+
+  // --- Verible Formatting Options (Verible 格式化选项) ---
+  // Note: Uncomment the lines below to override Verible's default behavior.
+  // 注意：取消下面行的注释以覆盖 Verible 的默认行为。
+
+  // == Indentation and Spacing (缩进与间距) ==
+
+  // // 每个缩进级别的空格数 (Number of spaces for indentation level) (Default: 2)
+  // "verible_indentation_spaces": 2,
+
+  // // 换行后的额外缩进空格数 (Number of spaces for wrapped line indentation) (Default: 4)
+  // "verible_wrap_spaces": 4,
+
+  // == Line Wrapping (换行) ==
+
+  // // 代码行的最大列数限制 (Column limit for line wrapping) (Default: 100)
+  // "verible_column_limit": 100,
+
+  // // 如果为 true，则将 end 和 else 分开放在不同行 (Places 'end' and 'else' on separate lines if true) (Default: false)
+  // "verible_wrap_end_else_clauses": false,
+
+  // // 尝试优化长行的换行 (Experimental: try to wrap long lines) (Default: false)
+  // "verible_try_wrap_long_lines": false,
+
+  // // 内部参数：换行的计算权重 (Internal: penalty for inserting a line break) (Default: 2)
+  // "verible_line_break_penalty": 2,
+
+  // // 内部参数：超过列限制的计算权重 (Internal: penalty for exceeding column limit) (Default: 1000)
+  // "verible_over_column_limit_penalty": 1000,
+
+  // == Alignment (对齐) ==
+  // Alignment modes: align, flush-left, preserve, infer
+  // 对齐模式：align（对齐）, flush-left（左对齐）, preserve（保持原样）, infer（推断）
+
+  // // 赋值语句的对齐方式 (Alignment for assignment statements) (Default: "infer")
+  // "verible_assignment_statement_alignment": "infer",
+
+  // // case 语句中各项的对齐方式 (Alignment for case items) (Default: "infer")
+  // "verible_case_items_alignment": "infer",
+
+  // // 类成员变量的对齐方式 (Alignment for class member variables) (Default: "infer")
+  // "verible_class_member_variable_alignment": "infer", // 注意：已修正名称变量名
+
+  // // distribution 项的对齐方式 (Alignment for distribution items) (Default: "infer")
+  // "verible_distribution_items_alignment": "infer",
+
+  // // enum 赋值语句的对齐方式 (Alignment for enum assignment statements) (Default: "infer")
+  // "verible_enum_assignment_statement_alignment": "infer",
+
+  // // 形式参数（函数/任务参数）的对齐方式 (Alignment for formal parameters) (Default: "infer")
+  // "verible_formal_parameters_alignment": "infer",
+
+  // // 形式参数（函数/任务参数）的缩进方式 ('indent' 或 'wrap') (Indentation style for formal parameters: 'indent' or 'wrap') (Default: "wrap")
+  // "verible_formal_parameters_indentation": "wrap",
+
+  // // (无效选项，已移除 - Invalid option, removed)
+  // // "verible_gate_instance_alignment": "align",
+
+  // // 模块网络/变量声明的对齐方式 (Alignment for module net/variable declarations) (Default: "infer")
+  // "verible_module_net_variable_alignment": "infer",
+
+  // // 命名参数赋值的对齐方式 (Alignment for named parameter assignments) (Default: "infer")
+  // "verible_named_parameter_alignment": "infer",
+
+  // // 命名参数赋值的缩进方式 ('indent' 或 'wrap') (Indentation style for named parameter assignments: 'indent' or 'wrap') (Default: "wrap")
+  // "verible_named_parameter_indentation": "wrap",
+
+  // // 命名端口连接的对齐方式 (Alignment for named port connections) (Default: "infer")
+  // "verible_named_port_alignment": "infer",
+
+  // // 命名端口连接的缩进方式 ('indent' 或 'wrap') (Indentation style for named port connections: 'indent' or 'wrap') (Default: "wrap")
+  // "verible_named_port_indentation": "wrap",
+
+  // // 端口声明的对齐方式 (Alignment for port declarations) (Default: "infer")
+  // "verible_port_declarations_alignment": "infer",
+
+  // // 端口声明的缩进方式 ('indent' 或 'wrap') (Indentation style for port declarations: 'indent' or 'wrap') (Default: "wrap")
+  // "verible_port_declarations_indentation": "wrap",
+
+  // // 是否在端口声明中右对齐 packed 维度 (Right-align packed dimensions in port declarations) (Default: false)
+  // "verible_port_declarations_right_align_packed_dimensions": false,
+
+  // // 是否在端口声明中右对齐 unpacked 维度 (Right-align unpacked dimensions in port declarations) (Default: false)
+  // "verible_port_declarations_right_align_unpacked_dimensions": false,
+
+  // // 结构体/联合体成员的对齐方式 (Alignment for struct/union members) (Default: "infer")
+  // "verible_struct_union_members_alignment": "infer",
+
+  // == Other Style Options (其他风格选项) ==
+
+  // // 在索引和位选择中使用紧凑的二元表达式 (Use compact binary expressions in indexing/slicing) (Default: true)
+  // "verible_compact_indexing_and_selections": true,
+
+  // // 是否总是展开 coverpoints (Always expand coverpoints) (Default: false)
+  // "verible_expand_coverpoints": false,
+
+  // // 显示效果相同的最优换行方案（用于调试）(Show equally optimal wrappings for debugging) (Default: false)
+  // "verible_show_equally_optimal_wrappings": false
+
+} 
